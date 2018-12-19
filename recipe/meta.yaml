@@ -43,7 +43,7 @@ about:
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Python bindings for xtensor, the C++ tensor algebra library'
+  summary: 'R bindings for xtensor, the C++ tensor algebra library'
   description: 'Multi dimensional arrays with broadcasting and lazy computing'
   doc_url: http://xtensor-r.readthedocs.io
   dev_url: https://github.com/QuantStack/xtensor-r
