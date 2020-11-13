@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
 
 requirements:
@@ -34,9 +34,9 @@ test:
     - test -f ${PREFIX}/include/xtensor-r/rarray.hpp  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-r/xtensor-rConfig.cmake  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-r/xtensor-rConfigVersion.cmake  # [unix]
-    - if exist %LIBRARY_PREFIX%\include\xtensor-r\rarray.hpp (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-rConfig.cmake (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-rConfigVersion.cmake (exit 0) else (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\include\xtensor-r\rarray.hpp (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\lib\cmake\xtensor-r\xtensor-rConfig.cmake (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\lib\cmake\xtensor-r\xtensor-rConfigVersion.cmake (exit 1)  # [win]
 
 about:
   home: http://quantstack.net/xtensor
@@ -53,3 +53,5 @@ extra:
     - SylvainCorlay
     - JohanMabille
     - wolfv
+    - davidbrochart
+    - conda-forge/xtensor
