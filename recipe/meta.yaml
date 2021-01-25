@@ -1,6 +1,6 @@
 {% set name = "xtensor-r" %}
-{% set version = "0.12.1" %}
-{% set sha256 = "06cf5c6587d72a82dff98e63f1340c18302669a0337758495f176b80ffdf2acc" %}
+{% set version = "0.13.0" %}
+{% set sha256 = "710b4f97ebb75a2195a5d5b2f5034241c7df2913d5069eb27b4c955880f0a03b" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win and vc<14]
 
 requirements:
@@ -20,8 +20,8 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
-    - xtl >=0.6.9,<0.7
-    - xtensor >=0.21.4,<0.22
+    - xtl >=0.7.0,<0.8
+    - xtensor >=0.23.0,<0.24
     - r-rcpp >=1.0.0,<1.1.0
   run:
     - {{ pin_compatible('xtl', max_pin='x.x') }}
