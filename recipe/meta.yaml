@@ -8,11 +8,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/QuantStack/xtensor-r/archive/{{ version }}.tar.gz
+  url: https://github.com/xtensor-stack/xtensor-r/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
 
 requirements:
@@ -39,14 +39,14 @@ test:
     - if not exist %LIBRARY_PREFIX%\lib\cmake\xtensor-r\xtensor-rConfigVersion.cmake (exit 1)  # [win]
 
 about:
-  home: http://quantstack.net/xtensor
-  license: BSD 3-Clause
+  home: https://github.com/xtensor-stack/xtensor-r
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'R bindings for xtensor, the C++ tensor algebra library'
   description: 'Multi dimensional arrays with broadcasting and lazy computing'
-  doc_url: http://xtensor-r.readthedocs.io
-  dev_url: https://github.com/QuantStack/xtensor-r
+  doc_url: https://xtensor-r.readthedocs.io
+  dev_url: https://github.com/xtensor-stack/xtensor-r
 
 extra:
   recipe-maintainers:

@@ -1,17 +1,17 @@
 About xtensor-r
 ===============
 
-Home: http://quantstack.net/xtensor
+Home: https://github.com/xtensor-stack/xtensor-r
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xtensor-r-feedstock/blob/master/LICENSE.txt)
 
 Summary: R bindings for xtensor, the C++ tensor algebra library
 
-Development: https://github.com/QuantStack/xtensor-r
+Development: https://github.com/xtensor-stack/xtensor-r
 
-Documentation: http://xtensor-r.readthedocs.io
+Documentation: https://xtensor-r.readthedocs.io
 
 Multi dimensional arrays with broadcasting and lazy computing
 
@@ -145,9 +145,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
