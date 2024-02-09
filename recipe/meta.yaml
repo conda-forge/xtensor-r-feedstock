@@ -1,6 +1,5 @@
 {% set name = "xtensor-r" %}
-{% set version = "0.14.2" %}
-{% set sha256 = "31e12b91a1c5ee33317d2f890ea8a553c29806884d701f951a314551661c5de3" %}
+{% set version = "0.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/xtensor-stack/xtensor-r/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 94fe1d982710b09026141ecd2dbbf145b0a5ff8e856924f65b4f9b5c1e84910e
 
 build:
   number: 0
@@ -21,7 +20,7 @@ requirements:
     - cmake
   host:
     - xtl >=0.7.5,<0.8
-    - xtensor >=0.24.4,<0.25
+    - xtensor >=0.25.0,<0.26
     - r-rcpp >=1.0.0,<1.1.0
   run:
     - {{ pin_compatible('xtl', max_pin='x.x') }}
