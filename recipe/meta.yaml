@@ -11,12 +11,14 @@ source:
   sha256: 94fe1d982710b09026141ecd2dbbf145b0a5ff8e856924f65b4f9b5c1e84910e
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - cmake
   host:
     - xtl >=0.7.5,<0.8
