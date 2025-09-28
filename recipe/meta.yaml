@@ -11,21 +11,24 @@ source:
   sha256: 94fe1d982710b09026141ecd2dbbf145b0a5ff8e856924f65b4f9b5c1e84910e
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - cmake
   host:
     - xtl >=0.7.5,<0.8
     - xtensor >=0.25.0,<0.26
-    - r-rcpp >=1.0.0,<1.1.0
+    - r-base
+    - r-rcpp
   run:
     - {{ pin_compatible('xtl', max_pin='x.x') }}
     - {{ pin_compatible('xtensor', max_pin='x.x') }}
-    - {{ pin_compatible('r-rcpp', max_pin='x.x') }}
+    - r-base
 
 test:
   commands:
