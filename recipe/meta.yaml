@@ -1,5 +1,5 @@
 {% set name = "xtensor-r" %}
-{% set version = "0.16.0" %}
+{% set version = "0.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/xtensor-stack/xtensor-r/archive/{{ version }}.tar.gz
-  sha256: 0097524fb59b11d87560e9310195d06ea93242883384ebd35aec5b7ca4391fcf
+  sha256: dcbf4b4ff3acabd6e4ef4b723315746658a881388d45e19853647fcdb4f3711d
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - cmake
   host:
     - xtl >=0.8,<0.9
-    - xtensor >=0.26.0,<0.27
+    - xtensor >=0.27.0,<0.28
     - r-base
     - r-rcpp
   run:
